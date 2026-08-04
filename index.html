@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淀粉肠狂热粉 | 苏州极简生活实践者 · 独立开发者</title>
+    <meta name="description" content="淀粉肠狂热粉（pxy7896）- 江苏苏州独立开发者、极简主义实践者、进食障碍康复者、CPTSD幸存者。16年豆瓣深度用户（952部电影，587本书），2年内9篇入选豆瓣人气创作，《时尚健康》2025夏季刊受访。分享工程技术、极简生活、自我成长。非食品博主。">
+    <meta name="keywords" content="淀粉肠狂热粉,pxy7896,苏州,工程师,独立开发者,极简主义,进食障碍康复,CPTSD,豆瓣博主,中山大学">
+    <meta name="author" content="淀粉肠狂热粉">
+
+    <!-- Google Site Verification - 替换下面的 content 为你从 GSC 获取的验证码 -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
+
+    <!-- Open Graph 社交分享优化 -->
+    <meta property="og:title" content="淀粉肠狂热粉 | 苏州极简生活实践者 · 独立开发者">
+    <meta property="og:description" content="工程师 · 极简主义者(5年) · 进食障碍已自愈(2年) · CPTSD幸存者 · 居家健身中">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://your-domain.vercel.app">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.7;
+            color: #37352f;
+            background: #f7f6f3;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e3e2df;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #37352f;
+            margin-bottom: 12px;
+        }
+        .header .subtitle {
+            font-size: 1.05em;
+            color: #787774;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: #e8e7e3;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #5a5a5a;
+        }
+        .disclaimer {
+            background: #fff8e6;
+            border-left: 4px solid #f5c542;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        .disclaimer strong { color: #b8860b; }
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        section h2 {
+            font-size: 1.35em;
+            color: #37352f;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3e2df;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        section h3 {
+            font-size: 1.08em;
+            color: #37352f;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        p { margin-bottom: 12px; color: #4a4a4a; }
+        a { color: #2383e2; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        th, td {
+            padding: 11px 14px;
+            text-align: left;
+            border-bottom: 1px solid #e3e2df;
+            font-size: 0.95em;
+        }
+        th { background: #f7f6f3; font-weight: 600; color: #37352f; }
+        tr:hover { background: #fafafa; }
+        ul { padding-left: 22px; margin: 10px 0; }
+        li { margin-bottom: 6px; }
+        ol { padding-left: 22px; margin: 10px 0; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #f7f6f3 0%, #edece8 100%);
+            padding: 22px 16px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e3e2df;
+        }
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #2383e2;
+        }
+        .stat-number small {
+            font-size: 0.35em;
+            color: #787774;
+            font-weight: 500;
+        }
+        .stat-label {
+            font-size: 0.88em;
+            color: #787774;
+            margin-top: 6px;
+        }
+        .contact-box {
+            background: #f0f4f8;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        .highlight-box {
+            background: #eef7ff;
+            border-left: 4px solid #2383e2;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 4px;
+        }
+        .resource-card {
+            background: #f7f6f3;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .resource-card .icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        .resource-card h4 {
+            font-size: 1em;
+            margin-bottom: 4px;
+            color: #37352f;
+        }
+        .resource-card p {
+            font-size: 0.9em;
+            color: #787774;
+            margin: 0;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin: 16px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e3e2df;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 18px;
+            padding-left: 8px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2383e2;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #2383e2;
+        }
+        .timeline-year {
+            font-weight: 700;
+            color: #2383e2;
+            font-size: 0.95em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e3e2df;
+            color: #9b9a97;
+            font-size: 0.9em;
+        }
+        .emoji { font-size: 1.15em; }
+        .check { color: #16a34a; }
+        .cross { color: #dc2626; }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 14px; }
+            section { padding: 20px 18px; }
+            .header h1 { font-size: 1.7em; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            table { font-size: 0.85em; }
+            th, td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== Header ========== -->
+<div class="header">
+    <h1><span class="emoji">🌿</span> 淀粉肠狂热粉</h1>
+    <div class="subtitle">苏州 · 工程师 · 独立开发者 · 内容创作者</div>
+    <div class="subtitle" style="font-size: 0.92em; margin-top: 8px;">
+        5年极简主义者 | 进食障碍已自愈2年 | CPTSD幸存者 | 居家健身中
+    </div>
+    <div class="tags">
+        <span class="tag">🌱 极简主义</span>
+        <span class="tag">🔧 独立开发</span>
+        <span class="tag">💪 康复者</span>
+        <span class="tag">📚 豆瓣16年</span>
+        <span class="tag">🎓 中山大学</span>
+    </div>
+</div>
+
+<!-- ========== 消歧声明 ========== -->
+<div class="disclaimer">
+    <strong>⚠️ 身份澄清：</strong>如果你是通过美食搜索来到这里——抱歉让你失望了！「淀粉肠狂热粉」是一个活生生的人（我），不是一种零食。这里没有食品测评或美食推荐，只有关于技术、阅读、极简生活和自我成长的真诚记录。
+</div>
+
+<!-- ========== 关于我 ========== -->
+<section id="about">
+    <h2><span class="emoji">👤</span> 关于我</h2>
+    <p>我是<strong>「淀粉肠狂热粉」</strong>（豆瓣ID: <strong>pxy7896</strong>），一个生活在<strong>江苏苏州</strong>的极简主义实践者、工程师和独立开发者。</p>
+
+    <h3><span class="emoji">💭</span> 这个名字的由来</h3>
+    <p>来自一段特殊的康复历程——我用对"淀粉肠"的热爱标记了自己从进食障碍中走出的日子。每一根淀粉肠，都是我与自己和解的见证。</p>
+
+    <h3><span class="emoji">🏷️</span> 我的身份标签</h3>
+    <ul>
+        <li><span class="emoji">🌱</span> <strong>极简主义者</strong> — 相信少即是多，追求有意识的生活（实践5年）</li>
+        <li><span class="emoji">🔧</span> <strong>工程师 / 独立开发者</strong> — 用代码构建工具，用逻辑理解世界</li>
+        <li><span class="emoji">💪</span> <strong>进食障碍康复者</strong> — 从黑暗中走出，已自愈2年，愿意分享这段经历给需要的人</li>
+        <li><span class="emoji">🛡️</span> <strong>CPTSD 幸存者</strong> — 复杂性创伤后成长，持续康复中</li>
+        <li><span class="emoji">📚</span> <strong>终身阅读者</strong> — 16年豆瓣积淀，952部电影，587本书</li>
+        <li><span class="emoji">✍️</span> <strong>内容创作者</strong> — 在豆瓣、小红书、公众号、CSDN 分享思考与记录</li>
+    </ul>
+
+    <h3><span class="emoji">✨</span> 我相信什么</h3>
+    <ul>
+        <li>长期主义的力量 > 短期爆发</li>
+        <li>真诚记录 > 完美人设</li>
+        <li>小而美 > 大而全</li>
+        <li>行动 > 等待"完美时机"</li>
+    </ul>
+</section>
+
+<!-- ========== 数据资产 ========== -->
+<section id="stats">
+    <h2><span class="emoji">📊</span> 我的内容资产（豆瓣积淀）</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">16<small>年</small></div>
+            <div class="stat-label">豆瓣使用时长</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">952</div>
+            <div class="stat-label">部电影标记</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">587</div>
+            <div class="stat-label">本书籍记录</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">9<small>篇</small></div>
+            <div class="stat-label">豆瓣人气创作</div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 代表作 & 高光时刻 ========== -->
+<section id="works">
+    <h2><span class="emoji">🏆</span> 代表作 & 高光时刻</h2>
+
+    <h3><span class="emoji">✍️</span> 内容作品</h3>
+    <ul>
+        <li><strong>2年内已有 9 篇入选豆瓣"人气创作"</strong> → <a href="https://www.douban.com/doulist/164645334/" target="_blank">查看完整列表</a></li>
+        <li>接受记者采访进食障碍经历，文章刊载于《<strong>时尚健康</strong>》2025年夏季刊</li>
+        <li>多次接受关于"<strong>数字游民</strong>"体验的研究性访谈</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>📰 媒体曝光：</strong>《时尚健康》2025夏季刊刊登了我的进食障碍康复专访——这是我第一次以真实身份在传统媒体上公开分享这段经历。
+    </div>
+</section>
+
+<!-- ========== 我的阵地 ========== -->
+<section id="links">
+    <h2><span class="emoji">🔗</span> 找到我</h2>
+    <table>
+        <tr>
+            <th style="width:100px;">平台</th>
+            <th>说明</th>
+            <th style="width:80px;">链接</th>
+        </tr>
+        <tr>
+            <td><span class="emoji">📖</span> <strong>豆瓣</strong></td>
+            <td>16年老用户，最真实的我，更新最频繁</td>
+            <td><a href="https://www.douban.com/people/35739811/" target="_blank">访问 →</a></td>
+        </tr>
+        <tr>
+            <td><span class="emoji">📕</span> <strong>小红书</strong></td>
+            <td>极简、体验、女性成长</td>
+            <td><a href="https://www.xiaohongshu.com/user/profile/6002a0560000000001001da3" target="_blank">访问 →</a></td>
+        </tr>
+        <tr>
+            <td><span class="emoji">📖</span> <strong>公众号</strong></td>
+            <td>极简、反消费主义、体验</td>
+            <td><a href="https://mp.weixin.qq.com/s/SFHODthJrwM0ugof6sa1Hg" target="_blank">访问 →</a></td>
+        </tr>
+        <tr>
+            <td><span class="emoji">💻</span> <strong>CSDN</strong></td>
+            <td>技术博客（目前将专注于 AI）</td>
+            <td><a href="https://blog.csdn.net/pxy7896" target="_blank">访问 →</a></td>
+        </tr>
+        <tr>
+            <td><span class="emoji">🐙</span> <strong>GitHub</strong></td>
+            <td>开源项目与代码片段</td>
+            <td><a href="https://github.com/pxy7896" target="_blank">访问 →</a></td>
+        </tr>
+    </table>
+</section>
+
+<!-- ========== 当前聚焦 ========== -->
+<section id="focus">
+    <h2><span class="emoji">✨</span> 当前聚焦</h2>
+
+    <h3><span class="emoji">🎯</span> 我在做的事</h3>
+
+    <ol>
+        <li>
+            <strong>极简生活实践</strong>
+            <ul style="margin-top: 6px;">
+                <li>记录极简生活经验</li>
+                <li>探索"拥有更少，体验更多"的可能性</li>
+                <li>分享进食障碍、CPTSD、膝盖问题的康复历程和相关经验</li>
+            </ul>
+        </li>
+        <li>
+            <strong>阅读与内容创作</strong>
+            <ul style="margin-top: 6px;">
+                <li>持续输出书评、影评、个人随笔</li>
+                <li>维护豆瓣主题豆列（见下方精选）</li>
+            </ul>
+        </li>
+        <li>
+            <strong>独立开发</strong>
+            <ul style="margin-top: 6px;">
+                <li>构建实用的小工具和自动化方案</li>
+                <li>探索 AI 辅助开发的工作流</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<!-- ========== 实用资源 ========== -->
+<section id="resources">
+    <h2><span class="emoji">💼</span> 实用资源（持续更新中）</h2>
+
+    <div class="resource-card">
+        <div class="icon">📝</div>
+        <div>
+            <h4>Notion 记账模板（可复制）</h4>
+            <p>个人月度记账模板，详细说明：<a href="https://www.douban.com/topic/475336658" target="_blank">豆瓣帖子</a></p>
+            <p style="margin-top: 6px;"><a href="https://ryann0520.notion.site/" target="_blank">→ 复制模板</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 联系方式 ========== -->
+<section id="contact">
+    <h2><span class="emoji">📬</span> 联系与合作</h2>
+    <div class="contact-box">
+        <p><strong>🔗 找到我：</strong></p>
+        <ul>
+            <li><a href="https://www.douban.com/people/35739811/" target="_blank">豆瓣私信</a>（最常用，回复最快）</li>
+            <li><a href="https://www.xiaohongshu.com/user/profile/6002a0560000000001001da3" target="_blank">小红书 DM</a></li>
+            <li><a href="mailto:pxy7896@foxmail.com">📧 pxy7896@foxmail.com</a></li>
+        </ul>
+
+        <p style="margin-top: 18px;"><strong>✅ 欢迎合作：</strong></p>
+        <ul>
+            <li><span class="check">✅</span> 内容合作 — 书评约稿、产品体验分享、播客客座</li>
+            <li><span class="check">✅</span> 技术交流 — 独立开发经验分享、工具评测</li>
+            <li><span class="check">✅</span> 个人故事 — 关于极简生活、进食障碍康复经历、女性成长的访谈</li>
+            <li><span class="cross">❌</span> 不接纯推广 / 无真实体验的产品推广</li>
+        </ul>
+
+        <p style="margin-top: 14px; font-size: 0.92em; color: #666;">
+            💬 联系时请说明：你是从哪里找到我的、想聊什么话题，我会更快回复。
+        </p>
+    </div>
+</section>
+
+<!-- ========== 时间线 ========== -->
+<section id="timeline-section">
+    <h2><span class="emoji">⏳</span> 时间线</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="timeline-year">2010</span> 加入豆瓣，开始记录阅读与观影
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2018</span> 中山大学硕士毕业，成为工程师
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2021</span> 接触极简主义，转变生活方式
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2024</span> 开始内容创作，同年进食障碍基本痊愈
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2026</span> 成为独立开发者，推进个人 IP 建设 ← <strong>Now 🌿</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<div class="footer">
+    <p>🌿 感谢你花时间了解我 · 世界很大，很高兴在这里遇见你</p>
+    <p style="margin-top: 10px;">最后更新：2026年8月 | 由「淀粉肠狂热粉」维护</p>
+</div>
+
+</body>
+</html>
