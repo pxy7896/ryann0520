@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>淀粉肠狂热粉 | 苏州极简生活实践者 · 独立开发者</title>
-    <meta name="description" content="淀粉肠狂热粉（pxy7896）- 江苏苏州独立开发者、极简主义实践者、进食障碍康复者、CPTSD幸存者。16年豆瓣深度用户（952部电影，587本书），2年内9篇入选豆瓣人气创作，《时尚健康》2025夏季刊受访。分享工程技术、极简生活、自我成长。非食品博主。">
+    <meta name="description" content="淀粉肠狂热粉（pxy7896）- 江苏苏州独立开发者、极简主义实践者、进食障碍康复者、CPTSD幸存者。16年豆瓣深度用户（952部电影，587本书），2年内13篇入选豆瓣人气创作，《时尚健康》2025夏季刊受访。分享工程技术、极简生活、自我成长。非食品博主。">
     <meta name="keywords" content="淀粉肠狂热粉,pxy7896,苏州,工程师,独立开发者,极简主义,进食障碍康复,CPTSD,豆瓣博主,中山大学">
     <meta name="author" content="淀粉肠狂热粉">
 
@@ -333,65 +333,23 @@
         }
         .sidebar-nav a.active .sn-dot { background: #2383e2; }
 
-        /* ===== 作品列表弹窗 ===== */
-        .works-modal {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+        /* ===== 人气创作行内列表（展开/收起） ===== */
+        .works-inline {
+            margin-top: 12px;
+            background: #f7f6f3;
+            border: 1px solid #e9e8e4;
+            border-radius: 10px;
+            padding: 8px 10px 2px;
         }
-        .works-modal.open { display: flex; }
-        .modal-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(55,53,47,0.45);
-        }
-        .modal-panel {
-            position: relative;
-            background: white;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 580px;
-            max-height: 82vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-            overflow: hidden;
-        }
-        .modal-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 18px 22px 13px;
-            border-bottom: 1px solid #e3e2df;
-        }
-        .modal-head h3 { font-size: 1.05em; color: #37352f; margin: 0; }
-        .modal-close {
-            border: none;
-            background: #f1f0ee;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            font-size: 18px;
-            line-height: 1;
-            color: #5a5a5a;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-        .modal-close:hover { background: #e8e7e3; }
-        .works-list { overflow-y: auto; padding: 10px 12px; }
-        .works-list a {
+        .works-inline[hidden] { display: none; }
+        .wk-row {
             display: flex;
             align-items: baseline;
             gap: 10px;
-            padding: 10px;
+            padding: 8px 10px;
             border-radius: 8px;
         }
-        .works-list a:hover { background: #f7f6f3; text-decoration: none; }
+        .wk-row:hover { background: #edece8; text-decoration: none; }
         .wk-idx {
             font-size: 0.78em;
             color: #9b9a97;
@@ -400,21 +358,23 @@
             flex-shrink: 0;
         }
         .wk-title { flex: 1; font-size: 0.92em; color: #37352f; line-height: 1.5; }
-        .works-list a:hover .wk-title { color: #2383e2; }
+        .wk-row:hover .wk-title { color: #2383e2; }
         .wk-src {
             flex-shrink: 0;
             font-size: 0.72em;
             color: #787774;
-            background: #f1f0ee;
+            background: #fff;
+            border: 1px solid #e3e2df;
             border-radius: 10px;
             padding: 2px 8px;
         }
-        .modal-foot {
-            padding: 12px 22px 16px;
-            border-top: 1px solid #e3e2df;
-            font-size: 0.88em;
-            color: #787774;
+        .works-inline-foot {
             text-align: center;
+            font-size: 0.85em;
+            color: #787774;
+            padding: 8px 0 10px;
+            border-top: 1px solid #e3e2df;
+            margin-top: 4px;
         }
 
         /* ===== 小程序指引图 ===== */
@@ -445,8 +405,6 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             table { font-size: 0.85em; }
             th, td { padding: 8px 10px; }
-            .works-modal { padding: 12px; }
-            .modal-panel { max-height: 86vh; }
             .wk-src { display: none; }
         }
     </style>
@@ -550,7 +508,51 @@
 
     <h3><span class="emoji">✍️</span> 内容作品</h3>
     <ul>
-        <li><strong>2年内已有 11 篇入选豆瓣"人气创作"</strong> → <a href="https://www.douban.com/doulist/164645334/" target="_blank" id="open-works-list" title="点击查看11篇文章列表">查看完整列表</a></li>
+        <li>
+            <strong>2年内已有 13 篇入选豆瓣"人气创作"</strong> → <a href="https://www.douban.com/doulist/164645334/" target="_blank" id="toggle-works-list" aria-expanded="false" aria-controls="works-inline">查看完整列表</a>
+            <div class="works-inline" id="works-inline" hidden>
+                <a class="wk-row" href="https://www.douban.com/group/topic/502139080/" target="_blank" rel="noopener">
+                    <span class="wk-idx">01</span><span class="wk-title">借助ZCode实现零代码开发微信小程序（含避坑指南）</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/502026898/" target="_blank" rel="noopener">
+                    <span class="wk-idx">02</span><span class="wk-title">身为软件工程毕业生，我竟然刚知道创造这个词的是女性</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/500025795/" target="_blank" rel="noopener">
+                    <span class="wk-idx">03</span><span class="wk-title">从10年进食障碍里爬出来的我，不建议你看大胃王吃播</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/497681559/" target="_blank" rel="noopener">
+                    <span class="wk-idx">04</span><span class="wk-title">4年送走3位祖辈，我开始思考养老和死亡（附书籍推荐）</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/494183635/" target="_blank" rel="noopener">
+                    <span class="wk-idx">05</span><span class="wk-title">康复经验分享 | 膝盖"坏掉"5年后，我终于与自己和解了</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/487259737/" target="_blank" rel="noopener">
+                    <span class="wk-idx">06</span><span class="wk-title">我的收纳原则：尽量废物利用</span><span class="wk-src">豆瓣广播</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/note/878519876/" target="_blank" rel="noopener">
+                    <span class="wk-idx">07</span><span class="wk-title">极简 | 1个本子1种笔记方法1个半月，我改掉了拖延症</span><span class="wk-src">豆瓣日记</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/473857476/" target="_blank" rel="noopener">
+                    <span class="wk-idx">08</span><span class="wk-title">极简 | 女性也可以不带包出门</span><span class="wk-src">豆瓣小组</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/note/878389867/" target="_blank" rel="noopener">
+                    <span class="wk-idx">09</span><span class="wk-title">我的天才女友：会种地会骑马会冲浪会送我咸鱼领带的女电工</span><span class="wk-src">豆瓣日记</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/topic/348388899/" target="_blank" rel="noopener">
+                    <span class="wk-idx">10</span><span class="wk-title">笑死，我朋友真是天才</span><span class="wk-src">豆瓣广播</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/note/875769082/" target="_blank" rel="noopener">
+                    <span class="wk-idx">11</span><span class="wk-title">体验 | 当程序员决定去书店做一日店长</span><span class="wk-src">豆瓣日记</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/note/875125825/" target="_blank" rel="noopener">
+                    <span class="wk-idx">12</span><span class="wk-title">穿"掉渣"鞋上央视的女院士：要特别看重自己</span><span class="wk-src">豆瓣日记</span>
+                </a>
+                <a class="wk-row" href="https://www.douban.com/note/871446474/" target="_blank" rel="noopener">
+                    <span class="wk-idx">13</span><span class="wk-title">极简 | 大学夜校初体验：班味啊它终于开始消散了</span><span class="wk-src">豆瓣日记</span>
+                </a>
+                <div class="works-inline-foot">数据来自 <a href="https://www.douban.com/doulist/164645334/" target="_blank" rel="noopener">豆瓣完整豆列 →</a></div>
+            </div>
+        </li>
         <li><strong>连续2年入选豆瓣社区小报</strong> → 
             <a href="https://m.douban.com/page2/8lfoCv7mQnv9ZGv" target="_blank">《当程序员决定去书店做一日店长》（2025/9/19）</a>
             <a href="https://m.douban.com/page2/r2RBlGfNEDocQZt" target="_blank">《我的天才女友：会种地会骑马会冲浪会送我咸鱼领带的女电工》（2026/3/26，特刊）</a>
@@ -616,7 +618,7 @@
     </div>
 
     <div class="resource-card">
-        <div class="icon"><img src="小程序logo.png" alt="七分整理小程序logo" class="logo-circle miniapp-logo"></div>
+        <div class="icon"><img src="小程序logo.png" alt="七分整理小程序logo" class="logo-circle miniapp-logo" loading="lazy" decoding="async"></div>
         <div>
             <h4>微信小程序：七分整理</h4>
             <ul style="margin-top: 6px;">
@@ -630,7 +632,7 @@
                 <li>全部清完有惊喜彩蛋</li>
             </ul>
             <div class="qr-banner">
-                <img src="小程序二维码.png" alt="微信小程序「七分整理」使用指引：打开微信，首页下拉进入小程序，搜索「七分整理」">
+                <img src="小程序二维码.png" alt="微信小程序「七分整理」使用指引：打开微信，首页下拉进入小程序，搜索「七分整理」" loading="lazy" decoding="async">
             </div>
             <p class="qr-tip">📱 打开微信 → 首页下拉 → 搜索「七分整理」即可使用</p>
             <p class="qr-tip" style="margin-top: 6px;">想了解完整开发过程？请看 <a href="https://www.douban.com/group/topic/502139080/" target="_blank" rel="noopener">借助ZCode实现零代码开发微信小程序（含避坑指南）</a></p>
@@ -688,7 +690,7 @@
 
 <!-- ========== Footer ========== -->
 <div class="footer">
-    <p><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle footer-logo"> 感谢你花时间了解我 · 世界很大，很高兴在这里遇见你</p>
+    <p><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle footer-logo" loading="lazy" decoding="async"> 感谢你花时间了解我 · 世界很大，很高兴在这里遇见你</p>
     <p style="margin-top: 10px;">最后更新：2026年10月 | 由「淀粉肠狂热粉」维护</p>
 </div>
 
@@ -703,80 +705,25 @@
     <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><span class="sn-dot"></span>↑ 回到顶部</a>
 </nav>
 
-<!-- ========== 作品列表弹窗 ========== -->
-<div class="works-modal" id="works-modal" role="dialog" aria-modal="true" aria-labelledby="works-modal-title">
-    <div class="modal-backdrop" data-close-works></div>
-    <div class="modal-panel">
-        <div class="modal-head">
-            <h3 id="works-modal-title"><span class="emoji">🏆</span> 豆瓣「人气创作」收录列表（共11篇）</h3>
-            <button class="modal-close" data-close-works aria-label="关闭弹窗">×</button>
-        </div>
-        <div class="works-list">
-            <a href="https://www.douban.com/topic/500025795/" target="_blank" rel="noopener">
-                <span class="wk-idx">01</span><span class="wk-title">从10年进食障碍里爬出来的我，不建议你看大胃王吃播</span><span class="wk-src">豆瓣小组</span>
-            </a>
-            <a href="https://www.douban.com/topic/497681559/" target="_blank" rel="noopener">
-                <span class="wk-idx">02</span><span class="wk-title">4年送走3位祖辈，我开始思考养老和死亡（附书籍推荐）</span><span class="wk-src">豆瓣小组</span>
-            </a>
-            <a href="https://www.douban.com/topic/494183635/" target="_blank" rel="noopener">
-                <span class="wk-idx">03</span><span class="wk-title">康复经验分享 | 膝盖"坏掉"5年后，我终于与自己和解了</span><span class="wk-src">豆瓣小组</span>
-            </a>
-            <a href="https://www.douban.com/topic/487259737/" target="_blank" rel="noopener">
-                <span class="wk-idx">04</span><span class="wk-title">我的收纳原则：尽量废物利用</span><span class="wk-src">豆瓣广播</span>
-            </a>
-            <a href="https://www.douban.com/note/878519876/" target="_blank" rel="noopener">
-                <span class="wk-idx">05</span><span class="wk-title">极简 | 1个本子1种笔记方法1个半月，我改掉了拖延症</span><span class="wk-src">豆瓣日记</span>
-            </a>
-            <a href="https://www.douban.com/topic/473857476/" target="_blank" rel="noopener">
-                <span class="wk-idx">06</span><span class="wk-title">极简 | 女性也可以不带包出门</span><span class="wk-src">豆瓣小组</span>
-            </a>
-            <a href="https://www.douban.com/note/878389867/" target="_blank" rel="noopener">
-                <span class="wk-idx">07</span><span class="wk-title">我的天才女友：会种地会骑马会冲浪会送我咸鱼领带的女电工</span><span class="wk-src">豆瓣日记</span>
-            </a>
-            <a href="https://www.douban.com/topic/348388899/" target="_blank" rel="noopener">
-                <span class="wk-idx">08</span><span class="wk-title">笑死，我朋友真是天才</span><span class="wk-src">豆瓣广播</span>
-            </a>
-            <a href="https://www.douban.com/note/875769082/" target="_blank" rel="noopener">
-                <span class="wk-idx">09</span><span class="wk-title">体验 | 当程序员决定去书店做一日店长</span><span class="wk-src">豆瓣日记</span>
-            </a>
-            <a href="https://www.douban.com/note/875125825/" target="_blank" rel="noopener">
-                <span class="wk-idx">10</span><span class="wk-title">穿"掉渣"鞋上央视的女院士：要特别看重自己</span><span class="wk-src">豆瓣日记</span>
-            </a>
-            <a href="https://www.douban.com/note/871446474/" target="_blank" rel="noopener">
-                <span class="wk-idx">11</span><span class="wk-title">极简 | 大学夜校初体验：班味啊它终于开始消散了</span><span class="wk-src">豆瓣日记</span>
-            </a>
-        </div>
-        <div class="modal-foot">
-            前往 <a href="https://www.douban.com/doulist/164645334/" target="_blank" rel="noopener">豆瓣完整豆列 →</a>
-        </div>
-    </div>
-</div>
-
 <script>
 (function () {
-    /* ---- 作品列表弹窗 ---- */
-    var modal = document.getElementById('works-modal');
-    var openBtn = document.getElementById('open-works-list');
-    function openModal() {
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-    if (openBtn) {
-        openBtn.addEventListener('click', function (e) {
+    /* ---- 人气创作列表展开/收起 ---- */
+    var toggle = document.getElementById('toggle-works-list');
+    var panel = document.getElementById('works-inline');
+    if (toggle && panel) {
+        toggle.addEventListener('click', function (e) {
             e.preventDefault();
-            openModal();
+            var opening = panel.hasAttribute('hidden');
+            if (opening) {
+                panel.removeAttribute('hidden');
+                toggle.textContent = '收起列表';
+            } else {
+                panel.setAttribute('hidden', '');
+                toggle.textContent = '查看完整列表';
+            }
+            toggle.setAttribute('aria-expanded', String(opening));
         });
     }
-    modal.addEventListener('click', function (e) {
-        if (e.target.closest('[data-close-works]')) closeModal();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeModal();
-    });
 
     /* ---- 侧边栏滚动高亮 ---- */
     var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.sidebar-nav a[href^="#"]'));
