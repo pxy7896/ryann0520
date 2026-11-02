@@ -408,6 +408,89 @@
             .wk-src { display: none; }
         }
     </style>
+    <!-- JSON-LD 结构化数据：Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://pxy7896.cn/#person",
+
+      "name": "淀粉肠狂热粉",
+      "alternateName": ["ryann", "pxy7896", "淀粉肠狂热粉(极简版)"],
+      "url": "https://pxy7896.cn",
+      "image": "https://pxy7896.cn/logo.png",
+
+      "description": "坐标苏州的独立开发者与自媒体博主。三重身份标签：工程师（生物信息与AI方向）、5年极简主义者、进食障碍康复者。昵称「淀粉肠狂热粉」源于对淀粉肠的热爱——用作标记进食障碍康复历程的叙事资产，与食品行业无关。",
+
+      "disambiguatingDescription": "同名消歧：此处「淀粉肠狂热粉」是一位苏州的个人博主（豆瓣17年用户、CSDN技术博主），不是淀粉肠食品，也不是任何淀粉肠品牌或店铺。",
+
+      "jobTitle": "独立开发者",
+      "knowsAbout": [
+        "极简主义",
+        "进食障碍康复",
+        "正念饮食",
+        "生物信息学",
+        "人工智能",
+        "AI辅助开发",
+        "独立开发",
+        "废物利用DIY"
+      ],
+
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "苏州",
+          "addressRegion": "江苏省",
+          "addressCountry": "CN"
+        }
+      },
+
+      "sameAs": [
+        "https://www.douban.com/people/35739811/",
+        "https://www.xiaohongshu.com/user/profile/6002a0560000000001001da3",
+        "https://blog.csdn.net/pxy7896",
+        "https://github.com/pxy7896"
+      ],
+
+      "subjectOf": [
+        {
+          "@type": "Article",
+          "name": "从10年进食障碍里爬出来的我，不建议你看大胃王吃播",
+          "url": "https://m.douban.com/page2/8lfoCv7mQnv9ZGv",
+          "isPartOf": { "@type": "PublicationIssue", "name": "豆瓣时间" }
+        },
+        {
+          "@type": "Article",
+          "name": "极简 | 0藏书的理由与实践",
+          "url": "http://mp.weixin.qq.com/s?__biz=MzUxMzc5MTU5NA==&mid=2247486951",
+          "isPartOf": { "@type": "PublicationIssue", "name": "个人微信公众号" }
+        },
+        {
+          "@type": "Article",
+          "name": "干货 | 为了摆脱进食障碍，30岁的我重新学习吃饭",
+          "url": "http://mp.weixin.qq.com/s?__biz=MzUxMzc5MTU5NA==&mid=2247487258"
+        }
+      ],
+
+      "hasPart": [
+        {
+          "@type": "CollectionPage",
+          "name": "豆瓣人气创作豆列（13篇入选）",
+          "url": "https://www.douban.com/doulist/164645334/"
+        }
+      ],
+
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/WriteAction",
+          "userInteractionCount": 13,
+          "name": "豆瓣人气创作篇数"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -560,11 +643,11 @@
     </ul>
     
     <div class="highlight-box">
-        <strong>📰 媒体曝光：</strong>豆瓣时间公众号在 2026/9/28 转载了我的文章《从10年进食障碍走出来，我不建议你看大胃王吃播》
+        <strong>📰 媒体曝光：</strong>豆瓣时间公众号在 2026/9/28 转载了我的文章<a href="https://mp.weixin.qq.com/s/sc7FQ8SiB80f2RqMkkIOSQ" target="_blank" rel="noopener">《从10年进食障碍走出来，我不建议你看大胃王吃播》</a>
     </div>
 
     <div class="highlight-box">
-        <strong>📰 媒体曝光：</strong>豆瓣时间公众号在 2026/9/9 转载了我的文章《4年送走3位祖辈，我开始思考养老和死亡》
+        <strong>📰 媒体曝光：</strong>豆瓣时间公众号在 2026/9/9 转载了我的文章<a href="https://mp.weixin.qq.com/s/dIrEg3HYlQlDWZSXSsCNBg" target="_blank" rel="noopener">《4年送走3位祖辈，我开始思考养老和死亡》</a>
     </div>
     
     <div class="highlight-box">
@@ -636,6 +719,21 @@
             </div>
             <p class="qr-tip">📱 打开微信 → 首页下拉 → 搜索「七分整理」即可使用</p>
             <p class="qr-tip" style="margin-top: 6px;">想了解完整开发过程？请看 <a href="https://www.douban.com/group/topic/502139080/" target="_blank" rel="noopener">借助ZCode实现零代码开发微信小程序（含避坑指南）</a></p>
+        </div>
+    </div>
+
+    <div class="resource-card">
+        <div class="icon"><img src="filter-logo.jpg" alt="豆瓣广播过滤器logo" class="logo-circle miniapp-logo" loading="lazy" decoding="async"></div>
+        <div>
+            <h4>豆瓣广播过滤器（浏览器扩展）</h4>
+            <ul style="margin-top: 6px;">
+                <li><strong>过滤</strong>：关键词/小组屏蔽，任意广播上点"不感兴趣"直接加关键词</li>
+                <li><strong>折叠</strong>：多人转发合并一条，附"你关注的N人转发"</li>
+                <li><strong>简报</strong>：每天按互动值排序的摘要，评论类/想看想读分页，带评分带作者</li>
+                <li><strong>一键跳转</strong>：支持一键跳转原广播，轻松评论/转发</li>
+                <li><strong>隐私安全</strong>：数据全部只存在你自己的浏览器里，不上传任何东西</li>
+                <li><strong>安装简单</strong>：<a href="https://github.com/pxy7896/douban-broadcast-filter" target="_blank" rel="noopener">仓库链接</a> → Releases页面下载zip → 扩展页开发者模式加载</li>
+            </ul>
         </div>
     </div>
 
