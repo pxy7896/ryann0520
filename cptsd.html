@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于CPTSD：觉察和自愈 | 淀粉肠狂热粉</title>
+    <meta name="description" content="「淀粉肠狂热粉」的CPTSD（复杂性创伤后应激障碍）自愈书单：12本精选书籍（附个人评语），同步自豆瓣豆列，涵盖创伤觉察、原生家庭、自我关怀等主题。">
+    <meta name="keywords" content="CPTSD,复杂性创伤后应激障碍,创伤疗愈,原生家庭,书单,自我关怀,淀粉肠狂热粉">
+    <meta name="author" content="淀粉肠狂热粉">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.7;
+            color: #37352f;
+            background: #f7f6f3;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e3e2df;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #37352f;
+            margin-bottom: 12px;
+        }
+        .header .subtitle {
+            font-size: 1.05em;
+            color: #787774;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: #e8e7e3;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #5a5a5a;
+        }
+        .disclaimer {
+            background: #fff8e6;
+            border-left: 4px solid #f5c542;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        .disclaimer strong { color: #b8860b; }
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        section h2 {
+            font-size: 1.35em;
+            color: #37352f;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3e2df;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        section h3 {
+            font-size: 1.08em;
+            color: #37352f;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        p { margin-bottom: 12px; color: #4a4a4a; }
+        a { color: #2383e2; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        ul { padding-left: 0; margin: 10px 0; list-style: none; }
+        .emoji { font-size: 1.15em; }
+
+        /* ===== 圆形 Logo ===== */
+        html { scroll-behavior: smooth; }
+        section[id], article[id], h3[id] { scroll-margin-top: 16px; }
+        .logo-circle { border-radius: 50%; object-fit: cover; display: inline-block; }
+        .header-logo { width: 54px; height: 54px; vertical-align: middle; margin-right: 12px; }
+        .footer-logo { width: 22px; height: 22px; vertical-align: -5px; margin-right: 5px; }
+        .qn-logo { width: 16px; height: 16px; vertical-align: -3px; margin-right: 2px; }
+
+        /* ===== 顶部快捷导航 ===== */
+        .quick-nav {
+            background: white;
+            border-radius: 8px;
+            padding: 14px 18px 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .quick-nav .qn-label {
+            font-size: 0.78em;
+            color: #9b9a97;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+        .qn-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+        .qn-item {
+            display: inline-block;
+            padding: 5px 13px;
+            background: #f1f0ee;
+            border-radius: 16px;
+            font-size: 0.85em;
+            color: #5a5a5a;
+        }
+        .qn-item:hover {
+            background: #e8e7e3;
+            color: #37352f;
+            text-decoration: none;
+        }
+
+        /* ===== 侧边快捷导航（宽屏显示） ===== */
+        .sidebar-nav {
+            display: none;
+            position: fixed;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(6px);
+            border: 1px solid #e3e2df;
+            border-radius: 12px;
+            padding: 10px 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        @media (min-width: 1240px) { .sidebar-nav { display: block; } }
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 8px;
+            font-size: 0.82em;
+            color: #787774;
+            white-space: nowrap;
+        }
+        .sidebar-nav a:hover { background: #f1f0ee; color: #37352f; text-decoration: none; }
+        .sidebar-nav a.active { background: #eef7ff; color: #2383e2; }
+        .sn-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #d3d1cb;
+            flex-shrink: 0;
+        }
+        .sidebar-nav a.active .sn-dot { background: #2383e2; }
+
+        /* ===== 侧边导航子项（康复文章分组） ===== */
+        .sn-sub {
+            padding: 1px 0 3px 12px;
+            border-left: 1px solid #e3e2df;
+            margin: 1px 0 3px 11px;
+        }
+        .sn-sub a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 7px;
+            font-size: 0.76em;
+            color: #9b9a97;
+            white-space: nowrap;
+        }
+        .sn-sub a:hover { background: #f1f0ee; color: #37352f; text-decoration: none; }
+        .sn-sub a.active { background: #eef7ff; color: #2383e2; }
+        .sn-sub-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #d3d1cb;
+            flex-shrink: 0;
+        }
+        .sn-sub a.active .sn-sub-dot { background: #2383e2; }
+
+        /* ===== 书籍推荐 ===== */
+        .book-card {
+            display: flex;
+            gap: 16px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eeebe6;
+        }
+        .book-card:last-child { border-bottom: none; }
+        .book-cover {
+            flex-shrink: 0;
+            width: 64px;
+        }
+        .book-cover img {
+            width: 64px;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+            display: block;
+        }
+        .book-info { flex: 1; min-width: 0; }
+        .book-title-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .book-idx {
+            font-size: 0.78em;
+            color: #9b9a97;
+            font-variant-numeric: tabular-nums;
+            min-width: 20px;
+            flex-shrink: 0;
+        }
+        .book-title { font-size: 1.05em; font-weight: 600; color: #37352f; }
+        .book-title:hover { color: #2383e2; }
+        .book-rating { font-size: 0.85em; color: #787774; margin-left: auto; }
+        .book-rating .stars { color: #f5a623; letter-spacing: 2px; }
+        .book-rating .votes { color: #9b9a97; font-size: 0.9em; }
+        .book-meta { font-size: 0.86em; color: #787774; margin: 2px 0 8px 30px; }
+        .book-comment {
+            margin-left: 30px;
+            background: #eef7ff;
+            border-left: 3px solid #2383e2;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 0.92em;
+            color: #4a4a4a;
+        }
+        .bc-label {
+            display: block;
+            font-size: 0.82em;
+            color: #2383e2;
+            margin-bottom: 2px;
+        }
+        .section-foot {
+            text-align: center;
+            font-size: 0.85em;
+            color: #787774;
+            padding: 14px 0 2px;
+            border-top: 1px solid #e3e2df;
+            margin-top: 14px;
+        }
+
+        /* ===== 文章 ===== */
+        .art-group {
+            margin: 26px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e3e2df;
+        }
+        .art-group:first-of-type { margin-top: 14px; }
+        .art-card {
+            border: 1px solid #eeebe6;
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            background: #fdfdfc;
+        }
+        .art-head .art-title { margin: 0 0 6px; font-size: 1.08em; line-height: 1.5; }
+        .art-head .art-title a { color: #37352f; }
+        .art-head .art-title a:hover { color: #2383e2; }
+        .art-meta {
+            font-size: 0.82em;
+            color: #9b9a97;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .art-badge {
+            background: #f1f0ee;
+            color: #5a5a5a;
+            border-radius: 10px;
+            padding: 2px 10px;
+            font-size: 0.92em;
+        }
+        .art-dot { color: #d3d1cb; }
+        .art-preview {
+            margin: 12px 0 4px;
+            color: #5a5a5a;
+            font-size: 0.95em;
+        }
+        .art-card.expanded .art-preview { display: none; }
+        .art-actions { margin-top: 10px; }
+        .read-more-btn {
+            background: none;
+            border: 1px solid #2383e2;
+            color: #2383e2;
+            border-radius: 16px;
+            padding: 5px 16px;
+            font-size: 0.85em;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.15s ease;
+        }
+        .read-more-btn:hover { background: #2383e2; color: white; }
+        .art-full[hidden] { display: none; }
+        .article-body {
+            border-top: 1px dashed #e3e2df;
+            margin-top: 14px;
+            padding-top: 14px;
+            font-size: 0.97em;
+            overflow-wrap: break-word;
+        }
+        .article-body p { margin: 0 0 12px; }
+        .article-body h2 {
+            font-size: 1.05em;
+            margin: 20px 0 10px;
+            padding: 0;
+            border: none;
+            display: block;
+        }
+        .article-body blockquote {
+            border-left: 3px solid #d3d1cb;
+            background: #f7f6f3;
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin: 0 0 12px;
+            color: #5a5a5a;
+        }
+        .article-body hr {
+            border: none;
+            border-top: 1px dashed #d3d1cb;
+            margin: 18px 0;
+        }
+        .article-body .art-img {
+            display: block;
+            max-width: 78%;
+            height: auto;
+            border-radius: 6px;
+            margin: 12px auto;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .article-body .subject-card {
+            display: flex;
+            width: fit-content;
+            align-items: center;
+            gap: 10px;
+            background: #f7f6f3;
+            border: 1px solid #e9e8e4;
+            border-radius: 8px;
+            padding: 8px 14px 8px 8px;
+            margin: 12px 0;
+            font-size: 0.88em;
+            color: #787774;
+        }
+        .article-body .subject-card:hover { text-decoration: none; background: #f1f0ee; }
+        .article-body .book-cover-inline {
+            width: 44px;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+        .art-src {
+            font-size: 0.82em;
+            color: #9b9a97;
+            margin: 16px 0 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e3e2df;
+            color: #9b9a97;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 14px; }
+            section { padding: 20px 18px; }
+            .header h1 { font-size: 1.7em; }
+            .header-logo { width: 44px; height: 44px; margin-right: 8px; }
+            .book-card { gap: 12px; }
+            .book-comment, .book-meta { margin-left: 0; }
+            .article-body .art-img { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== Header ========== -->
+<div class="header">
+    <h1><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle header-logo">关于CPTSD：觉察和自愈</h1>
+    <div class="subtitle">在觉察与自愈的路上，这些书陪我一点点看见自己、找回自己</div>
+    <div class="tags">
+        <span class="tag">🧠 CPTSD 觉察与自愈</span>
+        <span class="tag">📚 12 本精选书籍</span>
+        <span class="tag">🌱 淀粉肠狂热粉</span>
+    </div>
+</div>
+
+<!-- ========== 快捷导航 ========== -->
+<nav class="quick-nav" aria-label="页面快捷导航">
+    <div class="qn-label">🧭 快捷导航</div>
+    <div class="qn-row">
+        <a class="qn-item" href="index.html"><span class="emoji">🏠</span> 返回主页</a>
+        <a class="qn-item" href="#intro"><span class="emoji">📖</span> 本页说明</a>
+        <a class="qn-item" href="#books"><span class="emoji">📚</span> 书籍推荐</a>
+    </div>
+</nav>
+
+<!-- ========== 本页说明 ========== -->
+<section id="intro">
+    <h2><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle section-logo" style="width:30px;height:30px;flex-shrink:0;"> 本页说明</h2>
+    <p>复杂性创伤后应激障碍（CPTSD）常常源于长期的情感忽视或伤害，它不是矫情，也不是脆弱。作为一个正在觉察和自愈路上的人，我把这个过程中对我真正有帮助的<strong>书籍</strong>整理成了这份书单。</p>
+    <p>下方内容同步自我的豆瓣豆列：<a href="https://www.douban.com/doulist/164258371/" target="_blank" rel="noopener">《关于cptsd：觉察和自愈》</a>（书籍及我的评语），点击任意书名或封面可跳转豆瓣页面。书单会随着我的阅读持续更新。</p>
+</section>
+
+<div class="disclaimer">
+    <strong>⚠️ 温馨提示：</strong>本页内容是个人阅读与疗愈记录，不构成医疗建议。部分书籍涉及创伤议题，阅读时如果触发强烈不适，请随时停下来，必要时寻求专业心理咨询师或医生的帮助。你的感受，永远值得被优先照顾。
+</div>
+
+<!-- ========== 书籍推荐 ========== -->
+<section id="books">
+    <h2><span class="emoji">📚</span> 书籍推荐</h2>
+    <p style="color:#787774;font-size:0.92em;">共 12 本，按豆列顺序排列。有评语的是我读过的书，点击书名或封面可跳转豆瓣页面。</p>
+        <ul class="book-list">
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/36956864/" target="_blank" rel="noopener" title="在豆瓣查看《经营幸福的家》">
+        <img src="images/0a5935d06e8e7ed9.webp" alt="经营幸福的家" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">01</span>
+          <a class="book-title" href="https://book.douban.com/subject/36956864/" target="_blank" rel="noopener">经营幸福的家</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 7.8 <span class="votes">(100人评价)</span></span>
+        </div>
+        <div class="book-meta">[美]伊莱恩·卡尼·吉布森 · 北京联合出版公司 · 2024-7</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>如果cptsd是家庭/家人造成的，建议读一下这本。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/35581777/" target="_blank" rel="noopener" title="在豆瓣查看《清醒地活》">
+        <img src="images/b090cc04bd98c32e.webp" alt="清醒地活" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">02</span>
+          <a class="book-title" href="https://book.douban.com/subject/35581777/" target="_blank" rel="noopener">清醒地活</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 8.7 <span class="votes">(6174人评价)</span></span>
+        </div>
+        <div class="book-meta">[美] 迈克尔·辛格 · 机械工业出版社 · 2021-9</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>纳瓦尔宝典推荐的书。对觉知发展挺有用的。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/36700758/" target="_blank" rel="noopener" title="在豆瓣查看《早安，怪物》">
+        <img src="images/163e5a7fc097cc88.webp" alt="早安，怪物" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">03</span>
+          <a class="book-title" href="https://book.douban.com/subject/36700758/" target="_blank" rel="noopener">早安，怪物</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 9.0 <span class="votes">(15262人评价)</span></span>
+        </div>
+        <div class="book-meta">[加] 凯瑟琳·吉尔迪纳 · 花山文艺出版社 · 2024-3</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>cptsd患者的诊疗记录（有艺术加工版）。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/26815948/" target="_blank" rel="noopener" title="在豆瓣查看《当下的力量》">
+        <img src="images/1c170f273f3d19f7.webp" alt="当下的力量" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">04</span>
+          <a class="book-title" href="https://book.douban.com/subject/26815948/" target="_blank" rel="noopener">当下的力量</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 8.5 <span class="votes">(12905人评价)</span></span>
+        </div>
+        <div class="book-meta">[德] 埃克哈特·托利 · 中信出版社 · 2016-6</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>这个我觉得不好读，太抽象了。《清醒地活》探讨的是差不多的意思，但是好读多了。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/26896106/" target="_blank" rel="noopener" title="在豆瓣查看《被討厭的勇氣 二部曲完結篇》">
+        <img src="images/6c52f0c031097f32.webp" alt="被討厭的勇氣 二部曲完結篇" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">05</span>
+          <a class="book-title" href="https://book.douban.com/subject/26896106/" target="_blank" rel="noopener">被討厭的勇氣 二部曲完結篇</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 8.7 <span class="votes">(604人评价)</span></span>
+        </div>
+        <div class="book-meta">岸見一郎 / 古賀史健 · 究竟 · 2016-11</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>这本比上一本更偏重实践，最好在读完第一本后过一段时间再读。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/26369699/" target="_blank" rel="noopener" title="在豆瓣查看《被讨厌的勇气》">
+        <img src="images/22dc678c604c093a.webp" alt="被讨厌的勇气" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">06</span>
+          <a class="book-title" href="https://book.douban.com/subject/26369699/" target="_blank" rel="noopener">被讨厌的勇气</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 8.5 <span class="votes">(149010人评价)</span></span>
+        </div>
+        <div class="book-meta">[日] 岸见一郎 / [日] 古贺史健 · 机械工业出版社 · 2015-4</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>有人说这本爹味很重，不知道是不是译本的原因。我觉得说教意味是有一些，不过“闻道有先后”，我觉得书里两个人和我们都是平等的人，他们说的我们读者也未必要全盘接受，就当增加一个看待世界的角度就好。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/36986587/" target="_blank" rel="noopener" title="在豆瓣查看《我的骨头没有忘记》">
+        <img src="images/b4d4ab6c93942429.webp" alt="我的骨头没有忘记" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">07</span>
+          <a class="book-title" href="https://book.douban.com/subject/36986587/" target="_blank" rel="noopener">我的骨头没有忘记</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 8.4 <span class="votes">(5080人评价)</span></span>
+        </div>
+        <div class="book-meta">[美] 斯蒂芬妮·胡 · 广东经济出版社 · 2024-9</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>cptsd患者的感受和尝试</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/36669954/" target="_blank" rel="noopener" title="在豆瓣查看《母女关系》">
+        <img src="images/806137d3ae0cc8c3.webp" alt="母女关系" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">08</span>
+          <a class="book-title" href="https://book.douban.com/subject/36669954/" target="_blank" rel="noopener">母女关系</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 8.3 <span class="votes">(178人评价)</span></span>
+        </div>
+        <div class="book-meta">（美）苏珊·福沃德 / 唐娜·弗雷泽 · 化学工业出版社 · 2024-5</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>如果你的cptsd是母亲造成的，建议阅读。有很多实用建议。</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/38210124/" target="_blank" rel="noopener" title="在豆瓣查看《好女孩综合征》">
+        <img src="images/c10eb65eb861ad2e.webp" alt="好女孩综合征" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">09</span>
+          <a class="book-title" href="https://book.douban.com/subject/38210124/" target="_blank" rel="noopener">好女孩综合征</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 8.2 <span class="votes">(415人评价)</span></span>
+        </div>
+        <div class="book-meta">[西班牙] 玛尔塔·马丁内斯·诺沃亚 · 中信出版集团 · 2026-2</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>适合善于内省、优先考虑他人、过于自律、当过妈妈的“老公”的孝顺女儿</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/30191733/" target="_blank" rel="noopener" title="在豆瓣查看《对财富说是》">
+        <img src="images/f016531b573e9174.webp" alt="对财富说是" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">10</span>
+          <a class="book-title" href="https://book.douban.com/subject/30191733/" target="_blank" rel="noopener">对财富说是</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 7.6 <span class="votes">(1180人评价)</span></span>
+        </div>
+        <div class="book-meta">[澳]奥南朵 · 广东旅游出版社 · 2018-1</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>重点看原生家庭那部分</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/3533221/" target="_blank" rel="noopener" title="在豆瓣查看《非暴力沟通》">
+        <img src="images/ba7975ec2867cc96.webp" alt="非暴力沟通" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">11</span>
+          <a class="book-title" href="https://book.douban.com/subject/3533221/" target="_blank" rel="noopener">非暴力沟通</a>
+          <span class="book-rating"><span class="stars">★★★★☆</span> 8.4 <span class="votes">(75455人评价)</span></span>
+        </div>
+        <div class="book-meta">[美] 马歇尔·卢森堡 · 华夏出版社 · 2009-1</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>与自己沟通可用</div>
+      </div>
+    </li>
+<li class="book-card">
+      <a class="book-cover" href="https://book.douban.com/subject/36132802/" target="_blank" rel="noopener" title="在豆瓣查看《不原谅也没关系》">
+        <img src="images/d60c418d8c09dbfc.webp" alt="不原谅也没关系" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      </a>
+      <div class="book-info">
+        <div class="book-title-row">
+          <span class="book-idx">12</span>
+          <a class="book-title" href="https://book.douban.com/subject/36132802/" target="_blank" rel="noopener">不原谅也没关系</a>
+          <span class="book-rating"><span class="stars">★★★★★</span> 8.9 <span class="votes">(17157人评价)</span></span>
+        </div>
+        <div class="book-meta">[美] 皮特·沃克 · 北京科学技术出版社 · 2023-1</div>
+        <div class="book-comment"><span class="bc-label">💬 我的评语</span>cptsd必读。不过有很多人反馈会触发闪回，如果读的时候感觉很糟就停止，一定要尊重自己的感受。可以等到有能量的时候继续阅读或过几年再读。</div>
+      </div>
+    </li>
+    </ul>
+    <div class="section-foot">数据来自 <a href="https://www.douban.com/doulist/164258371/" target="_blank" rel="noopener">豆瓣豆列《关于cptsd：觉察和自愈》→</a></div>
+</section>
+
+<!-- ========== Footer ========== -->
+<div class="footer">
+    <p><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle footer-logo" loading="lazy" decoding="async"> 愿你在觉察与自愈的路上，一点点把自己找回来 · 世界很大，很高兴在这里遇见你</p>
+    <p style="margin-top: 10px;">同步自豆瓣豆列 · 更新于<span id="last-updated">2026年11月</span> | 由「<a href="index.html">淀粉肠狂热粉</a>」维护</p>
+    <p style="margin-top: 8px;">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color: inherit;">苏ICP备2026072958号-2</a>
+        <span style="margin: 0 8px; color: #c9c8c4;">|</span>
+        <a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener" style="color: inherit;">
+            <img src="备案.png" alt="公安备案图标" width="14" height="15" loading="lazy" decoding="async" style="vertical-align: -3px; margin-right: 4px;">苏公网安备32059002008657号
+        </a>
+    </p>
+</div>
+
+<!-- ========== 侧边快捷导航（宽屏显示） ========== -->
+<nav class="sidebar-nav" aria-label="侧边快捷导航">
+    <a href="#intro"><span class="sn-dot"></span>本页说明</a>
+    <a href="#books"><span class="sn-dot"></span>书籍推荐</a>
+    <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><span class="sn-dot"></span>↑ 回到顶部</a>
+</nav>
+
+<script>
+(function () {
+    /* ---- 页脚“更新于”自动显示当前年月 ---- */
+    var updatedEl = document.getElementById('last-updated');
+    if (updatedEl) {
+        var now = new Date();
+        updatedEl.textContent = now.getFullYear() + '年' + (now.getMonth() + 1) + '月';
+    }
+
+    /* ---- 侧边栏滚动高亮 ---- */
+    var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.sidebar-nav a[href^="#"]'));
+    var linkMap = {};
+    sideLinks.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        if (id) linkMap[id] = a;
+    });
+    var topLink = document.querySelector('.sidebar-nav a.top-link');
+    var targets = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+    function updateActive() {
+        var current = null;
+        if (window.scrollY < 80) {
+            current = '__top__';
+        } else {
+            for (var i = 0; i < targets.length; i++) {
+                if (targets[i].offsetTop <= window.scrollY + window.innerHeight * 0.3) current = targets[i].id;
+            }
+        }
+        sideLinks.forEach(function (a) { a.classList.remove('active'); });
+        if (current === '__top__') {
+            if (topLink) topLink.classList.add('active');
+        } else if (current && linkMap[current]) {
+            linkMap[current].classList.add('active');
+        }
+    }
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+})();
+</script>
+
+</body>
+</html>
