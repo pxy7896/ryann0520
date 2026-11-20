@@ -16,6 +16,7 @@ import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 PORT = 8899
+BASE_UV = 500  # 计数初始值（显示数 = BASE_UV + 真实访客数）；修改后 systemctl restart visitor-counter 生效
 DB = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'counter.db')
 ALLOWED_ORIGINS = {'https://pxy7896.cn', 'https://www.pxy7896.cn'}
 
@@ -73,10 +74,10 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/visit':
             ip = self.headers.get('X-Forwarded-For', self.client_address[0]).split(',')[0].strip()
             uv, pv = visit(ip)
-            self._send({'uv': uv, 'pv': pv})
+            self._send({'uv': BASE_UV + uv, 'pv': pv})
         elif path == '/count':
             uv, pv = counts()
-            self._send({'uv': uv, 'pv': pv})
+            self._send({'uv': BASE_UV + uv, 'pv': pv})
         elif path == '/healthz':
             self._send({'ok': True})
         else:
