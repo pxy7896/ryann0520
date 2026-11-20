@@ -1,0 +1,15 @@
+[Unit]
+Description=Visitor counter API (count.pxy7896.cn)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/visitor-counter
+ExecStart=/usr/bin/python3 /opt/visitor-counter/counter_server.py
+Restart=always
+RestartSec=3
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

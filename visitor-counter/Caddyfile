@@ -1,0 +1,11 @@
+# 访问计数服务 Caddy 配置
+# 用途：把 https://count.pxy7896.cn 反向代理到本机 127.0.0.1:8899 的计数服务，
+#       证书由 Caddy 自动申请和续期（Let's Encrypt），无需手动管理。
+#
+# 安装方法见《访问计数器部署指南.md》第 5 步：
+#   sudo nano /etc/caddy/Caddyfile   ← 把整个文件内容替换为下面三行
+#   sudo systemctl reload caddy
+
+count.pxy7896.cn {
+	reverse_proxy 127.0.0.1:8899
+}

@@ -496,6 +496,7 @@
 
 <!-- ========== Header ========== -->
 <div class="header">
+    <p id="visitor-line" style="display:none;font-size:0.85em;color:#9b9a97;margin-bottom:8px;">👋 你是第 <strong id="visitor-count" style="color:#37352f;"> </strong> 位访客</p>
     <h1><img src="logo.png" alt="淀粉肠狂热粉的logo" class="logo-circle header-logo">淀粉肠狂热粉</h1>
     <div class="tags">
         <span class="tag">🌱 极简主义</span>
@@ -832,6 +833,14 @@
 
 <script>
 (function () {
+    /* ---- 顶部访客计数（服务部署于 count.pxy7896.cn，未就绪时整行隐藏） ---- */
+    fetch('https://count.pxy7896.cn/visit').then(function (r) { return r.json(); }).then(function (d) {
+        if (d && d.uv) {
+            document.getElementById('visitor-count').textContent = d.uv;
+            document.getElementById('visitor-line').style.display = '';
+        }
+    }).catch(function () {});
+
     /* ---- 页脚“最后更新”自动显示当前年月 ---- */
     var updatedEl = document.getElementById('last-updated');
     if (updatedEl) {
